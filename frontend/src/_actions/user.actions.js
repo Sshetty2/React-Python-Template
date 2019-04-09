@@ -19,24 +19,22 @@ export const userActions = {
 
 function login(userid, password) {
     return dispatch => {
-        dispatch(request({ userid }));
+        dispatch({ type: userConstants.LOGIN_REQUEST, userid });
 
         userService.login(userid, password)
             .then(
                 user => { 
-                    dispatch(success(user));
+                    dispatch({ type: userConstants.LOGIN_SUCCESS, user });
                     history.push('/');
                 },
                 error => {
-                    dispatch(failure(error.toString()));
+                    error = error.toString()
+                    dispatch({ type: userConstants.LOGIN_FAILURE, error } );
                     dispatch(alertActions.error(error.toString()));
                 }
             );
     };
 
-    function request(user) { return { type: userConstants.LOGIN_REQUEST, user } }
-    function success(user) { return { type: userConstants.LOGIN_SUCCESS, user } }
-    function failure(error) { return { type: userConstants.LOGIN_FAILURE, error } }
 }
 
 function logout() {

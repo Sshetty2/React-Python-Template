@@ -25,7 +25,7 @@ DBNAME = "master.db"
 def validate_pw(useridobj):
     userid= useridobj['userid']
     password= useridobj['password']
-    
+    print('endpoint hit')
     try: 
         user_object = set_user_object(userid)
     except:
