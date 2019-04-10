@@ -28,11 +28,14 @@ def validate_pw(useridobj):
     print('endpoint hit')
     try: 
         user_object = set_user_object(userid)
+        print('user object set')
     except:
         return "username error"
+        print('username error')
     pass_hash = user_object.pass_hash
     if user_object.check_password(pass_hash, password):
         return "success"
+        print('success')
     return "password error"
 
 def create_new_user(useridobj):
