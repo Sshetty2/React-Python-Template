@@ -1,7 +1,7 @@
 export * from './user.service';
 
 
-// The creator of this repo combines all files in this directory this way in order to call functions without having to designate specific file names prior to execution
+//  the * combines all files in this directory this way in order to call functions without having to designate specific file names prior to execution
 
 //ie handleSubmit from the registration page
 
