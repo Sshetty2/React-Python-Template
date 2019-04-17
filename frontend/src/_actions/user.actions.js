@@ -19,6 +19,8 @@ export const userActions = {
 
 function login(userid, password) {
     return dispatch => {
+        // sends message to reducer
+        // alert is sent if error is received
         dispatch({ type: userConstants.LOGIN_REQUEST, userid });
 
         userService.login(userid, password)
@@ -30,7 +32,7 @@ function login(userid, password) {
                 error => {
                     error = error.toString()
                     dispatch({ type: userConstants.LOGIN_FAILURE, error } );
-                    dispatch(alertActions.error(error.toString()));
+                    dispatch(alertActions.error(error));
                 }
             );
     };
