@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [posts, setPosts] = useState<Array<Post>>([]);
 
   const fetchPosts = async () => {
-    const response = await fetch('https://localhost:5000/');
+    const response = await fetch('http://localhost:5000/');
     const json = await response.json();
     setPosts(json);
   };

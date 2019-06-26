@@ -1,15 +1,14 @@
-#!/usr/bin/env python3
-
 from flask import Flask, jsonify, json
 # import connexion
 import model2
-# from flask_cors import CORS
+from flask_cors import CORS
 
 # app = connexion.FlaskApp(__name__, specification_dir='./')
 # CORS(app.app)
 # app.add_api('swagger.yml')
 
 app = Flask(__name__)
+CORS(app)
 
 #from connexion docs to set CORS headers
 @app.route('/', methods=['GET'])
@@ -24,7 +23,7 @@ def sample_JSON():
 
 @app.route('/albums', methods=['GET'])
 def sample_JSON_albums():
-    data = model2.sample_JSON_albums()
+    data = model2.sample_JSON()
     response = app.response_class(
     response=json.dumps(data),
     status=200,
