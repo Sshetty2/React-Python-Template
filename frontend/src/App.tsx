@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 import { Post } from './types';
+import Table from './Table';
+
+import "./assets/scss/material-dashboard-pro-react.scss";
 
 const App: React.FC = () => {
   const [posts, setPosts] = useState<Array<Post>>([]);
@@ -45,6 +48,9 @@ const App: React.FC = () => {
           </div>
         ))}
       </header>
+      <div>
+        <Table />
+      </div>
     </div>
   );
 };
