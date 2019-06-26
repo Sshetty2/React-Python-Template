@@ -1,0 +1,30 @@
+// export interface Song {
+//   id: string;
+//   name: string;
+//   artists: Array<Artist>;
+//   audio_features: AudioFeatures;
+//   uri: string;
+// }
+
+// export interface Artist {
+//   name: string;
+//   uri: string;
+// }
+
+// export interface AudioFeatures {
+//   danceability: number;
+//   energy: number;
+//   speechiness: number;
+//   acousticness: number;
+//   instrumentalness: number;
+//   liveness: number;
+//   valence: number;
+//   [key: string]: number;
+// }
+
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
