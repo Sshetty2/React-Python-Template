@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { sampleData } from './sampleData.js'
+import { sampleData } from './sampleData.js';
 
 // import { Post } from './types';
 
@@ -31,7 +31,7 @@ const App = () => {
   // };
 
   useEffect(() => {
-    console.log(posts)
+    console.log(posts);
   }, [posts]);
 
   return (
