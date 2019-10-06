@@ -2,3 +2,4 @@ backend/env
 backend/run/src/tempCodeRunnerFile.py
 *.pyc
 graphql-server-example/
+backend/node_modules
